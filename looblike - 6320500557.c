@@ -16,10 +16,8 @@ int main()
     {
         if(x[i] == x[i+1])
         {
-           printf("%d ",x[i]);
+            printf("%d ",x[i]);
         }
     }
-
-
     return 0;
 }
