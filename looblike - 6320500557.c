@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int n,i,j,k=0;
+    int n,i,j=0,k=0;
     scanf("%d",&n);
     int x[n],m[n];
     for(i=1; i<=n; i++)
@@ -14,11 +14,22 @@ int main()
     }
      for(i=1; i<=n; i++)
     {
-        if(x[i++] == x[i+1])
+        m[i] = x[i];
+        if(x[i] == x[i+1])
         {
-            m[i] = x[i];
-            printf("%d ",x[i]);
+            k = x[i];
+        }
+        if( m[i+1] == x[i+2] )
+        {
+            j = m[i];
         }
     }
+    if(k != j )
+    {
+        printf("%d ",k);
+        printf("%d",j);
+    }
+    else
+        printf("%d",k);
     return 0;
 }
