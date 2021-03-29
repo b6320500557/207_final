@@ -11,23 +11,30 @@ int main()
             scanf("%d",&x[i][j]);
         }
     }
-  /*  for(i=0; i<n2; i++)
+    printf("\n");
+  /* for(i=0; i<n2; i++)
     {
         for(j=0; j<n2; j++)
         {
             scanf("%d",&y[i][j]);
         }
     }
+    printf("\n");
     for(i=0; i<n3; i++)
     {
         for(j=0; j<n3; j++)
         {
             scanf("%d",&z[i][j]);
         }
-    }*/
+    }
+    printf("\n");*/
      for(i=0; i<n1; i++)
     {
-        sum[i] += x[i];
+
+        for(j=0; j<n1; j++)
+        {
+            sum[i] = x[i][j=i]+x[i][j=i];
+        }
         printf("%d ",sum[i]);
     }
 
