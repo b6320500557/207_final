@@ -3,7 +3,7 @@ int main()
 {
     int n1,n2,n3,i,j,k;
     scanf("%d %d %d",&n1,&n2,&n3);
-    int x[n1][n1],y[n2][n2],z[n3][n3],sum[20];
+    int x[n1][n1],y[n2][n2],z[n3][n3],sum[20][20];
     for(i=0; i<n1; i++)
     {
         for(j=0; j<n1; j++)
@@ -11,8 +11,7 @@ int main()
             scanf("%d",&x[i][j]);
         }
     }
-    printf("\n");
-  /* for(i=0; i<n2; i++)
+  for(i=0; i<n2; i++)
     {
         for(j=0; j<n2; j++)
         {
@@ -27,17 +26,17 @@ int main()
             scanf("%d",&z[i][j]);
         }
     }
-    printf("\n");*/
+
      for(i=0; i<n1; i++)
     {
-
         for(j=0; j<n1; j++)
         {
-            sum[i] = x[i][j=i]+x[i][j=i];
+            sum[i][j] += x[1][j+1];
+            printf("%d ",sum[i][j]);
         }
-        printf("%d ",sum[i]);
-    }
+        printf("\n");
 
+    }
 
     return 0;
 }
